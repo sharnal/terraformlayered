@@ -1,11 +1,10 @@
-resource "aws_subnet" "subnet-shubham" {
-    vpc_id = data.terraform_remote_state._20-vpc.outputs.vpc-shubham_id
-    cidr_block = var.subnet_cidr_block
-    map_public_ip_on_launch = false
+resource "aws_instance" "app_server" {
+    ami           = "ami-00bb6a80f01f03502"
+    instance_type = "t3.micro"
+    subnet_id     = data.terraform_remote_state._30-subnet.outputs.subnet-shubham_id
 
     tags = {
-        Name = "subnet-shubham-${var.environment}"
+        Name = "Mahesh-Madala-TF-VM"
         Environment = var.environment
     }
-
 }   

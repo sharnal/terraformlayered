@@ -1,12 +1,16 @@
-output "ec2-sandeepg_id" {
-  value       = aws_instance.ec2-sandeepg.id
-  description = "The ID of the created EC2"
-}
-output "ec2-sandeepg_name" {
-  value       = aws_instance.ec2-sandeepg.tags["Name"]
-  description = "The Name of the created EC2"
-}
-output "ec2-sandeepg_tags" {
-  value       = aws_instance.ec2-sandeepg.tags
-  description = "The tags of the created EC2"
-}
+output "subnet-shubham_id" {
+   value       = aws_subnet.subnet-shubham.id
+   description = "The ID of the created subnet"
+ }
+ output "subnet-shubham_cidr_block" {
+   value       = aws_subnet.subnet-shubham.cidr_block
+   description = "The CIDR block of the created subnet"
+ }
+ output "subnet-shubham_name" {
+   value       = aws_subnet.subnet-shubham.tags["Name"]
+   description = "The Name of the created subnet"
+ }
+ output "subnet-shubham_tags" {
+   value       = aws_subnet.subnet-shubham.tags
+   description = "The tags of the created subnet"
+ }

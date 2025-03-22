@@ -20,3 +20,8 @@ resource "aws_s3_object" "_20-vpc" {
   bucket = aws_s3_bucket.terraform-state-files.id
   key    = "20-vpc/"
 }
+
+resource "aws_s3_object" "_40-ec2" {
+  bucket = aws_s3_bucket.terraform-state-files.id
+  key    = "40-ec2/"
+}
